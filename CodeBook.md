@@ -16,8 +16,9 @@ The source data set was obtained from here
 ##Code book 
 
 The following steps were used to process the source data into the tidy data set
-1. The file getdata-projectfiles-UCI HAR Dataset.zip was extracted to the UCI HAR Dataset folder
-2. The following training files were merged by column
+1.   The file getdata-projectfiles-UCI HAR Dataset.zip was extracted to the UCI HAR Dataset folder
+
+2.   The following training files were merged by column
      - X_train.txt
      - y_train.txt
      - subject_train.txt
