@@ -13,6 +13,10 @@
 #    5. The output file tidy_data_set.txt will be placed in the working
 #       directory
 
+#-------------------------------------------------------------------------------
+#    Load the plyr library
+#-------------------------------------------------------------------------------
+library(plyr)
 
 #-------------------------------------------------------------------------------
 #    Load the files from the UCI HAR Dataset directory
