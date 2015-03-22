@@ -77,8 +77,9 @@ dataExtracted <- dataMerged[,grep("ActivityID|SubjectID|mean|std",
 #    3. Use descriptive activity names to name the activities in the data set.
 #-------------------------------------------------------------------------------
 
-#    Add the activity names
+#    Add the activity names and remove the ActivityID column
 dataLabeled <- merge(activityLabels,dataExtracted,by="ActivityID")
+dataLabeled$ActivityID <-NULL
 
 
 #-------------------------------------------------------------------------------
@@ -106,4 +107,4 @@ names(dataLabeled) <- columnNames
 dataAveraged = ddply(dataLabeled, c("SubjectID","ActivityName"), 
                numcolwise(mean))
 
-write.table(dataAveraged, file = "tidy_data_set.txt")
+write.table(dataAveraged, file = "tidy_data_set.txt", row.names=FALSE)
